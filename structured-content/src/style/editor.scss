@@ -1,0 +1,144 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+
+.editor-styles-wrapper {
+
+  .sc_multi-wrapper {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: $border-radius;
+
+    .sc_card {
+      margin: $main-unit auto 0;
+    }
+  }
+
+  a.sc_info-label {
+    background: $light-green;
+    border-radius: $border-radius;
+    padding: $main-unit * .25;
+    font-size: $main-unit * .875;
+    line-height: $main-unit * 1.125;
+    color: $green;
+    padding-left: $main-unit * 1.5;
+    display: table;
+    position: relative;
+    text-decoration: none;
+
+    svg {
+      width: $main-unit;
+      height: $main-unit;
+      display: inline-block;
+      fill: $green;
+      position: absolute;
+      left: $main-unit * .25;
+      top: $main-unit * .25;
+    }
+  }
+
+  button {
+    &.sc_button {
+      background-color: black;
+      color: white;
+      border-radius: $border-radius;
+      padding: $main-unit * .5;
+      font-size: $main-unit * .75;
+      border: none;
+      position: relative;
+      cursor: pointer;
+      width: 100%;
+      margin-top: $main-unit;
+
+      &.no-margin-top {
+        margin-top: 0;
+      }
+
+      &.delete {
+        border-radius: 100%;
+        position: absolute;
+        width: $main-unit * 2.25;
+        height: $main-unit * 2.25;
+        top: -1.5em;
+        right: -1.5em;
+      }
+
+      .icon-span {
+        display: inline;
+        margin-right: $main-unit * .5;
+
+        svg {
+          width: $main-unit * .75;
+          height: $main-unit * .75;
+          position: relative;
+          top: 1px;
+          fill: white;
+        }
+      }
+
+      &.inline {
+        margin-left: $main-unit * .5;
+        margin-top: 0;
+        width: auto;
+        float: right;
+        z-index: 9;
+
+        .icon-span {
+          margin-right: 0;
+        }
+      }
+
+    }
+  }
+
+  .sc_input-group fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+
+  .sc_toggle-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &.single {
+      justify-content: flex-end;
+    }
+
+    > * {
+      cursor: pointer;
+    }
+  }
+
+  .sc_card {
+    .image-wrapper {
+      height: auto;
+      background: white;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px, rgba(0, 0, 0, 0.08) 0px 0px 1px;
+      border-radius: $border-radius;
+      max-width: 100%;
+      width: auto;
+      overflow: hidden;
+      margin-bottom: $main-unit * .75;
+
+      img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  .sc_row {
+    .sc_row {
+      align-items: end;
+    }
+  }
+}

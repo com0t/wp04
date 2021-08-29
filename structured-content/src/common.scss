@@ -1,0 +1,214 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+
+
+/**
+	Sizes
+ */
+$border-radius: 4px;
+$main-unit: 16px;
+
+/**
+	Colors
+ */
+
+$green: #114431;
+$light-green: #DAF1E8;
+
+.sc_card {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  border-radius: $border-radius;
+  background: #fff;
+  margin: 2em auto;
+  width: 100%;
+  overflow: hidden;
+  padding: 1em;
+  box-sizing: border-box;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    line-height: 1.2em;
+    margin: 0 0 1em;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:empty {
+      display: none;
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    margin-bottom: 1em;
+  }
+
+  .sc_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+    margin-top: 15px;
+  }
+
+  .sc_company {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 15px;
+  }
+
+  .sc_company-logo-wrapper,
+  .sc_person-image-wrapper {
+    height: auto;
+    margin-top: 15px;
+    background: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.08);
+    border-radius: $border-radius;
+    max-width: 100%;
+    width: auto;
+    overflow: hidden;
+    margin-bottom: $main-unit * .75;
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+
+  .sc_grey-box {
+    background: #f2f2f2;
+    border-radius: $border-radius;
+    padding: $main-unit;
+
+    .sc_box-label {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: #000;
+      margin-bottom: $main-unit * .75;
+    }
+  }
+
+  .sc_input-group {
+    .sc_input-label {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 150%;
+      color: #000;
+    }
+  }
+
+  .wp-block-structured-content-person__colleague_url {
+    font-size: .875em;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 468px) {
+  .sc_card p {
+    padding: 0 1em 1em;
+  }
+}
+
+@media (min-width: 469px) {
+  .sc_fs_faq__figure {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+
+    a {
+      display: block;
+
+      img {
+        margin-bottom: 0;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .sc_card {
+    .sc_row {
+      grid-template-columns: 1fr;
+      margin-top: 0;
+    }
+
+    .sc_company {
+      grid-template-columns: 1fr;
+    }
+
+    .sc_grey-box {
+      margin-top: 15px;
+    }
+  }
+}
+
+/** TinyMCE **/
+
+
+.w-100 {
+  width: 100%;
+}
+
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+i.mce-ico.mce-i-structured-content {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE5SURBVHgBrZThUcMwDIWfQrgDfiUbdASPkG7ABsAEhU3YAJigsEFHMBtkg+YX9OBi8YyTNmAuuG3enRM7tj/JkhVpzPkaQIFp1OQDWNO9OdYakIER7eZkFtb5cdT/3pv3WzJkty0+XjOcLBzwxIUVP9ehqeG8OugL4AxX05hjE8vGOagC94HTycOA05lyAYe9xTr0tXZwkkEWQN59F3rWeg8LwqqeI4yhxkfe9ocqdkY8TM2vfgScRNsYKvSmtJtHHKC1ObsWyMMP4G7y4jIEPEVZU9q3Z/zlYS+BLv0zTRq2jAF59DmS1UbJi4C8b1dIls/wpx0F0kPGMLkUvYd3o8DCvpc4QhGQ93KJPX4WdGA+CvSlhGTp/0kp7GaPLMcalt6Kt73GASLA9PU89LBSHF/WBOoKk0mbL1wWbz1nKPlvAAAAAElFTkSuQmCC') !important;
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.mce-window.mce-container.mce-sc_panel .mce-container-body.mce-abs-layout {
+  overflow: hidden;
+}
+
+/**
+ FAQ Summary
+ */
+
+.entry-content .sc_fs_faq summary,
+.sc_fs_faq summary {
+
+  &:focus {
+    outline: none;
+  }
+
+  * {
+    margin: 0;
+    display: inline;
+    padding: 0;
+  }
+
+  + div {
+
+    // TODO: Fix Overflow stop float
+
+    margin-top: 1em;
+    overflow: hidden;
+
+    img {
+      margin-top: 0;
+    }
+
+  }
+
+}

@@ -1,0 +1,77 @@
+.mce-window.mce-container.mce-sc-panel .mce-container-body.mce-abs-layout {
+    overflow: hidden;
+}
+
+form#sc-start-point fieldset {
+    padding-top: 15px;
+}
+
+form#sc-start-point fieldset input:not([type=checkbox]), form#sc-start-point fieldset select {
+    width: 69%;
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    height: 30px;
+    border: 1px solid #ddd;
+}
+
+form#sc-start-point fieldset label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 31%;
+    float: left;
+}
+
+form#sc-start-point fieldset div {
+    overflow: hidden;
+    clear: both;
+}
+
+form#sc-start-point fieldset div[name=imageID] {
+    width: 31%;
+    float: left;
+}
+
+form#sc-start-point fieldset div[name=imageID]:before {
+    content: "Bild ID: ";
+    pointer-events: none;
+}
+
+form#sc-start-point fieldset .mce-btn.long {
+    width: 100%;
+}
+
+#fields + .mce-btn.long {
+    width: 100%;
+    margin-top: 15px;
+}
+
+form#sc-start-point fieldset .mce-btn.removeLast {
+    display: none;
+}
+
+form#sc-start-point fieldset:last-of-type .mce-btn.removeLast {
+    display: table;
+}
+
+form#sc-start-point textarea {
+    white-space: normal;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+    color: #32373c;
+    margin-bottom: 15px;
+    width: 69%;
+    display: block;
+    box-sizing: border-box;
+}
+
+form#sc-start-point #addOne {
+    width: 100%;
+}
+
+form#sc-start-point .sc-hr {
+    border: .5px solid #ddd;
+    margin: 10px 0;
+}
